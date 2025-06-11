@@ -1,0 +1,25 @@
+📌 Phase 15: Lifting State Up for Shared Data
+To make HomePage (All Tasks) and TodayPage (Today's Tasks) share the same list of tasks and the functions to manage them, we need to introduce a fundamental React concept: "Lifting State Up."
+----------------------------------------------------------------
+What is "Lifting State Up"?
+
+In React, if two (or more) components need to share the same state, or if a child component needs to communicate with another child component, the shared state should be "lifted up" to their closest common ancestor component.
+The common ancestor component will then manage that state.
+The common ancestor passes the state down as props to the children that need to read it.
+It also passes the functions to update that state down as props to the children that need to modify it.
+
+In your project structure, App.jsx is the closest common ancestor to both HomePage and TodayPage (since both are rendered by Routes directly inside App.jsx's Layout). Therefore, we will move the tasks state and the addTask, toggleComplete, and deleteTask functions from HomePage.jsx up to App.jsx.
+
+_________________________________________________________________________________________
+
+📌 What is useEffect?
+
+useEffect is a React Hook that lets you synchronize a component with an external system. It's perfect for "side effects" like:
+
+*** Fetching data from an API.
+*** Interacting with the browser's DOM (e.g., setting a document title).
+*** Setting up subscriptions or timers.
+*** Reading from or writing to localStorage!
+***  ..etc
+
+⚡useEffect runs after every render where its dependencies have changed.

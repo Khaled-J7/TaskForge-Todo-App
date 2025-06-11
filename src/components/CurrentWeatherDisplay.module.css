@@ -1,0 +1,39 @@
+/* src/components/CurrentWeatherDisplay.module.css */
+.current-weather-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.2rem;
+	padding: 0.1rem 0.3rem; /* Reduced padding for smaller size */
+	border-radius: 0.2rem; /* Slightly less rounded */
+	background-color: #4a5568;
+	color: #e2e8f0;
+	font-size: 0.7rem; /* Smaller font size */
+	font-weight: 500;
+	margin-top: 0.2rem; /* Reduced margin-top for tighter fit under "Today" */
+	text-align: center;
+	white-space: nowrap;
+	min-width: 60px; /* Reduced min-width */
+}
+
+.loading,
+.error,
+.no-data {
+	color: #a0aec0;
+	font-size: 0.6rem; /* Even smaller for messages */
+	padding: 0.1rem;
+}
+
+.error {
+	color: #e53e3e;
+}
+
+.weather-icon {
+	width: 20px; /* Smaller icon */
+	height: 20px; /* Smaller icon */
+	flex-shrink: 0;
+}
+
+.temp {
+	font-weight: 600;
+}

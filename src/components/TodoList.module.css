@@ -1,0 +1,28 @@
+/* src/components/TodoList.module.css */
+.todo-list {
+	list-style: none; /* Remove default list bullets */
+	padding: 0; /* Remove default padding */
+	margin: 1.5rem 0; /* Add some vertical margin around the list */
+	width: 100%; /* Ensure list takes full width of its parent */
+	max-height: 400px; /* Limit height to enable scrolling if many tasks */
+	overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Scrollbar styling for a cleaner look (optional, but good for dark themes) */
+.todo-list::-webkit-scrollbar {
+	width: 8px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+	background: #1a202c; /* Dark background for the track */
+	border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+	background: #4a5568; /* Slightly lighter thumb color */
+	border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+	background: #6b7280; /* Even lighter on hover */
+}

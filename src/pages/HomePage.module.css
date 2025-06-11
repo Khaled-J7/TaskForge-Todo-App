@@ -1,0 +1,93 @@
+/* src/pages/HomePage.module.css */
+.home-page-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center content horizontally */
+	width: 100%;
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 2.5rem; /* Base padding */
+
+	/* --- NEW: Gradient Border Styling --- */
+	/* Base background color for the content area */
+	background-color: #1a202c;
+	border-radius: 1rem;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.1);
+	color: #e2e8f0;
+	flex-grow: 1;
+
+	position: relative; /* Needed for z-index, if using multiple layers */
+	z-index: 1; /* Ensure content is above any potential background layers */
+
+	/* Define the gradient for the border */
+	border: 2px solid transparent; /* This creates the border thickness and makes it transparent */
+	background-image: linear-gradient(#1a202c, #1a202c),
+		/* Solid background for content area */
+			linear-gradient(45deg, #00c6ff, #0072ff); /* Shiny sky blue gradient for border */
+	background-origin: border-box; /* Start background from border edge */
+	background-clip: padding-box, border-box; /* Clip first gradient to padding-box, second to border-box */
+	background-repeat: no-repeat; /* Crucial for gradients to not tile */
+}
+
+/* Remove the ::before pseudo-element rule, as it's no longer used */
+/* .home-page-container::before { ... } */
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: #ffffff;
+	margin-bottom: 2rem;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.filter-buttons-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	width: 100%;
+	justify-content: center;
+}
+
+.filter-button {
+	background-color: #4a5568;
+	color: #e2e8f0;
+	padding: 0.6rem 1.2rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 0.95rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	flex-shrink: 0;
+}
+
+.filter-button:hover {
+	background-color: #667eea;
+	color: #ffffff;
+}
+
+.filter-button.active {
+	background-color: #667eea;
+	color: #ffffff;
+	font-weight: 600;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clear-completed-button {
+	background-color: #e53e3e;
+	color: #ffffff;
+	padding: 0.7rem 1.4rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-top: 1.5rem;
+}
+
+.clear-completed-button:hover {
+	background-color: #c53030;
+}

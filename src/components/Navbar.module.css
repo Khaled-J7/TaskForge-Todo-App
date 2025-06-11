@@ -1,0 +1,93 @@
+/* src/components/Navbar.module.css */
+.logo {
+	height: 3.5rem; /* Your desired logo height */
+	width: 3.5rem; /* Your desired logo width */
+	object-fit: contain;
+}
+
+.navbar {
+	background-color: #2d3748; /* Darker gray for the navbar */
+	padding: 1rem 1.5rem;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	/* --- NEW: PRO Styling without dimension change --- */
+	/* Subtle overall shadow */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3),
+		/* Deeper overall shadow */ 0 0 0 1px rgba(0, 0, 0, 0.2); /* Very thin, subtle inner border-like shadow */
+
+	/* Subtle gradient effect on the bottom edge using background-image */
+	/* This won't alter dimensions, just adds a subtle visual flair */
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+
+	/* You can also try a "glassmorphism" blur if you like the effect */
+	/* backdrop-filter: blur(8px); */
+	/* -webkit-backdrop-filter: blur(8px); */
+}
+
+.nav-container {
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /* Keep all main items centrally aligned vertically */
+}
+
+.brand-link {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.app-title {
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	margin-left: 0.75rem;
+	/* --- NEW: Subtle text shadow for a more PRO look --- */
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.nav-links-group {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav-link {
+	color: #cbd5e0;
+	padding: 0.6rem 1rem;
+	border-radius: 0.375rem;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+		text-shadow 0.2s ease;
+	white-space: nowrap;
+	/* --- NEW: Subtle text shadow for links --- */
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link:hover {
+	color: #ffffff;
+	background-color: #4a5568;
+	/* --- NEW: Enhance hover effect with a subtle blue glow/shadow --- */
+	box-shadow: 0 0 8px 0 rgba(0, 198, 255, 0.5); /* Shiny blue glow */
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Subtle white glow on text */
+}
+
+.today-nav-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
+	margin-top: 0.3rem; /* Keep this to maintain alignment */
+}
+
+.today-nav-item .nav-link {
+	margin-bottom: -0.2rem; /* Keep this for baseline alignment */
+}

@@ -1,0 +1,154 @@
+/* src/components/AddTodoForm.module.css */
+.add-todo-form {
+	display: flex;
+	gap: 1rem; /* Space between input and button */
+	width: 100%;
+	margin-bottom: 1.5rem; /* Space below the form */
+	flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.task-input {
+	flex-grow: 1; /* Allows input to take up most of the space */
+	padding: 0.8rem 1rem;
+	border: 1px solid #4a5568; /* Darker border */
+	border-radius: 0.5rem;
+	background-color: #1a202c; /* Dark background */
+	color: #e2e8f0; /* Light text color */
+	font-size: 1rem;
+	outline: none; /* Remove default outline */
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	min-width: 150px; /* Ensure input is not too small on wrap */
+}
+
+.task-input::placeholder {
+	color: #a0aec0; /* Placeholder text color */
+	opacity: 0.8;
+}
+
+.task-input:focus {
+	border-color: #667eea; /* Highlight border on focus */
+	box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); /* Soft glow */
+}
+
+.add-button {
+	padding: 0.8rem 1.5rem;
+	background-color: #667eea; /* Primary button color */
+	color: #ffffff; /* White text */
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.add-button:hover {
+	background-color: #5a67d8; /* Darker shade on hover */
+}
+
+.date-picker-input {
+	flex-grow: 1;
+	padding: 0.8rem 1rem;
+	border: 1px solid #4a5568;
+	border-radius: 0.5rem;
+	background-color: #1a202c;
+	color: #e2e8f0;
+	font-size: 1rem;
+	outline: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	min-width: 150px;
+}
+
+.date-picker-input::placeholder {
+	color: #a0aec0;
+	opacity: 0.8;
+}
+
+.date-picker-input:focus {
+	border-color: #667eea;
+	box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* --- NEW: DatePicker calendar popover overriding default styles --- */
+/* Target the main container of the popover */
+.react-datepicker-popper {
+	z-index: 2000; /* Ensure it appears above other elements */
+}
+
+/* Main calendar container */
+.react-datepicker {
+	background-color: #2d3748; /* Dark background */
+	border: 1px solid #4a5568; /* Dark border */
+	border-radius: 0.5rem;
+	font-family: 'Poppins', sans-serif; /* Apply our Poppins font */
+	color: #e2e8f0; /* Default text color */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Header (Month/Year display) */
+.react-datepicker__header {
+	background-color: #1a202c; /* Even darker header background */
+	border-bottom: 1px solid #4a5568;
+	padding-top: 0.8rem;
+	position: relative;
+}
+
+/* Current month/year title */
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+	color: #ffffff; /* White for month/year and day names */
+	font-weight: 600;
+}
+
+/* Day names (Mon, Tue, Wed) */
+.react-datepicker__day-name {
+	color: #a0aec0; /* Slightly dimmed for day names */
+}
+
+/* Navigation arrows */
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+	top: 10px; /* Adjust vertical position */
+	border: none;
+	background-color: transparent;
+	color: #e2e8f0; /* Arrow color */
+	font-size: 1.5rem; /* Larger arrows */
+}
+
+.react-datepicker__navigation-icon::before {
+	border-color: #e2e8f0 !important; /* Force arrow color */
+}
+
+/* Days of the month */
+.react-datepicker__day {
+	color: #e2e8f0; /* Default day number color */
+	margin: 0.1rem; /* Spacing between days */
+	border-radius: 0.3rem; /* Small rounding */
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for days */
+.react-datepicker__day:hover {
+	background-color: #4a5568; /* Darker background on hover */
+	color: #ffffff;
+}
+
+/* Selected day */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+	background-color: #667eea !important; /* Primary color for selected day */
+	color: #ffffff !important;
+	border-radius: 0.3rem;
+}
+
+/* Today's day (if not selected) */
+.react-datepicker__day--today {
+	font-weight: bold;
+	color: #9f7aea; /* A subtle purple for today's date */
+}
+
+/* Clear button in input */
+.react-datepicker__close-icon::after {
+	background-color: #a0aec0; /* Color for the X icon */
+}

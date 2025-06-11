@@ -1,0 +1,30 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.app-container {
+	min-height: 100vh;
+	background-color: #1a202c; /* A dark gray equivalent to Tailwind's gray-900 or similar */
+	display: flex;
+	flex-direction: column;
+	color: #cbd5e0; /* A light gray for default text color */
+}
+
+.app-footer {
+	margin-top: auto; /* Equivalent to Tailwind's mt-auto */
+	padding-top: 1rem; /* py-4 */
+	padding-bottom: 1rem; /* py-4 */
+	font-size: 0.875rem; /* text-sm */
+	color: #a0aec0; /* text-gray-400 */
+	text-align: center;
+	background-color: #1a202c; /* Matches .app-container background */
+}
+
+/* Basic reset for better consistency */
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif; /* Fallback font */
+}

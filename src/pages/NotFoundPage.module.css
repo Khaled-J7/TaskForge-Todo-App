@@ -1,0 +1,45 @@
+/* src/pages/NotFoundPage.module.css */
+.not-found-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+	flex-grow: 1; /* Allow it to take up available space in the main content area */
+}
+
+.not-found-title {
+	font-size: 6rem; /* Large 404 number */
+	font-weight: 700;
+	color: #e53e3e; /* Red color for emphasis */
+	margin-bottom: 1rem;
+}
+
+.not-found-message {
+	font-size: 1.5rem; /* Text size for the main message */
+	color: #cbd5e0; /* Light gray text */
+	margin-bottom: 0.5rem;
+}
+
+.not-found-subtext {
+	font-size: 1rem; /* Smaller text for additional info */
+	color: #a0aec0; /* Slightly darker light gray */
+	margin-bottom: 2rem;
+}
+
+.go-home-button {
+	display: inline-block; /* Allows padding and margin */
+	background-color: #667eea; /* A nice purple/blue color */
+	color: #ffffff; /* White text */
+	padding: 0.8rem 1.5rem;
+	border-radius: 0.5rem; /* Rounded corners */
+	text-decoration: none; /* Remove underline */
+	font-size: 1.125rem; /* Medium font size */
+	font-weight: 600;
+	transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.go-home-button:hover {
+	background-color: #5a67d8; /* Darker shade on hover */
+}

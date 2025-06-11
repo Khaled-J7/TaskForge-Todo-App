@@ -1,0 +1,155 @@
+/* src/components/TodoItem.module.css */
+.todo-item {
+  background-color: #2d3748; /* Darker background for the item */
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem; /* Space between items */
+  display: flex; /* Use Flexbox for overall layout */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space out content, dates, and delete button */
+  color: #e2e8f0; /* Light text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* Needed for absolute positioning of hover details if used */
+  overflow: hidden; /* Hide overflow content from date-details-hover initially */
+}
+
+/* Style for completed tasks */
+.todo-item.completed {
+  background-color: #1a202c; /* Slightly darker background for completed tasks */
+  opacity: 0.8;
+}
+
+/* Container for checkbox and task text */
+.task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow content to take available space */
+  margin-right: 1rem; /* Space before dates/buttons */
+}
+
+.task-checkbox {
+  margin-right: 1rem; /* Space between checkbox and text */
+  width: 1.25rem; /* Standard checkbox size */
+  height: 1.25rem;
+  cursor: pointer;
+  appearance: none;
+  background-color: #cbd5e0;
+  border: 2px solid #a0aec0;
+  border-radius: 0.25rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.task-checkbox:checked {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+.task-checkbox:checked::after {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.task-text {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  word-break: break-word; /* Allow long words to break */
+  flex-grow: 1; /* Allow text to take remaining space */
+}
+
+/* Strikethrough for completed task text */
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+/* Container for date display (visible on hover) */
+.date-details-hover {
+  display: none; /* Initially hidden */
+  flex-direction: column; /* Stack dates vertically */
+  align-items: flex-end; /* Align text to the right */
+  font-size: 0.8rem; /* Smaller font for details */
+  color: #a0aec0; /* Dimmed color */
+  margin-left: auto; /* Push to the right */
+  margin-right: 1rem; /* Space before delete button */
+  white-space: nowrap; /* Prevent date details from wrapping */
+}
+
+/* Date display always visible (not on hover) */
+.task-dates-summary {
+    font-size: 0.85rem;
+    color: #a0aec0; /* Dimmed color */
+    margin-left: 1rem; /* Space from text */
+    white-space: nowrap; /* Prevent wrapping */
+    flex-shrink: 0; /* Prevent from shrinking */
+}
+
+.created-date, .due-date {
+    display: block; /* Ensure each date is on its own line */
+    line-height: 1.2;
+}
+
+.due-date {
+    color: #a0aec0; /* Can be a different color if desired */
+    font-weight: 500;
+}
+
+.delete-button {
+  background-color: #e53e3e; /* Red for delete */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 1rem; /* Space between text/dates and button */
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.delete-button:hover {
+  background-color: #c53030; /* Darker red on hover */
+}
+
+/* --- NEW: Hover Effect --- */
+.todo-item:hover .date-details-hover {
+    display: flex; /* Show on hover */
+}
+
+.todo-item:hover .task-dates-summary {
+    display: none; /* Hide summary on hover */
+}
+
+/* Media queries for responsiveness (example, can be refined) */
+@media (max-width: 600px) {
+    .todo-item {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: flex-start; /* Align items to start */
+        padding: 0.8rem 1rem;
+    }
+
+    .task-content {
+        flex-basis: 100%; /* Checkbox and text take full width */
+        margin-bottom: 0.5rem; /* Space below content */
+        margin-right: 0;
+    }
+
+    .task-dates-summary, .date-details-hover {
+        flex-basis: 100%; /* Dates take full width */
+        text-align: left;
+        margin-left: 0; /* No margin-left */
+        margin-bottom: 0.5rem;
+    }
+
+    .delete-button {
+        margin-left: auto; /* Push delete button to right */
+        margin-top: 0.5rem;
+    }
+}

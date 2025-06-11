@@ -1,0 +1,33 @@
+/* src/pages/TodayPage.module.css */
+.today-page-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center content horizontally */
+	width: 100%;
+	max-width: 600px;
+	margin: 2rem auto; /* More vertical margin, center horizontally */
+	padding: 2.5rem; /* Increased padding to match PRO cards */
+
+	/* --- NEW: PRO Styling based on HomePage container --- */
+	background-color: #1a202c; /* Even darker background for the main content block, matches inner cards on AboutPage */
+	border-radius: 1rem; /* More rounded corners */
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+	border: 2px solid transparent; /* This creates the border thickness and makes it transparent */
+	background-image: linear-gradient(#1a202c, #1a202c),
+		/* Solid background for content area */
+			linear-gradient(45deg, #00c6ff, #0072ff); /* Shiny sky blue gradient for border */
+	background-origin: border-box; /* Start background from border edge */
+	background-clip: padding-box, border-box; /* Clip first gradient to padding-box, second to border-box */
+	background-repeat: no-repeat; /* Crucial for gradients to not tile */
+
+	color: #e2e8f0; /* Default text color within this container */
+	flex-grow: 1; /* Allow it to take up available space in the main content area */
+}
+
+.page-title {
+	font-size: 2.5rem; /* Larger, more impactful title */
+	font-weight: 800; /* Extra bold */
+	color: #ffffff;
+	margin-bottom: 2.5rem; /* More space below title */
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow */
+}
