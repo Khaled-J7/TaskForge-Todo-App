@@ -42,19 +42,20 @@ To run TaskForge on your local machine:
 
 ## 📸 Screenshots
 ### All Tasks Page
-![All Tasks View](docs/images/all-tasks-homepage.png)
+![All Tasks View](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/AllTasks.png)
 *A view of the main task management page, showing filters and the weather widget.*
 
 ### Task Interaction (Hover/Clear)
-![Task Interaction Example](docs/images/task-interaction-hover.png)
+![Task Interaction Example](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/AllTasks_List_of_tasks.png)
+![Task Interaction Example](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/ClearTask_ALL_TASKS.png)
 *Demonstrating task completion and hover details.*
 
 ### Today's Tasks Page
-![Today's Tasks View](docs/images/today-tasks-page.png)
+![Today's Tasks View](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/TodayPage.png)
 *Focus on tasks due on the current day.*
 
 ### About Page
-![About Page Details](docs/images/about-page.png)
+![About Page Details](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/AboutPage.png)
 *Showcasing project features, technologies, and architecture.*
 
 ---
