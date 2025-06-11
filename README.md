@@ -1,6 +1,10 @@
 # TaskForge - Your Personal Todo Manager
 
-## 📸 Screenshots
+## 🚀 Overview
+TaskForge is a modern, intuitive, and feature-rich Todo List application designed to help users efficiently manage their daily tasks. With powerful features for task creation, tracking, and organization, along with real-time weather integration, TaskForge provides a seamless experience for staying productive.
+
+---
+
 ### All Tasks Page
 ![All Tasks View](https://github.com/Khaled-J7/TaskForge-Todo-App/blob/main/docs/images/AllTasks.png)
 *A view of the main task management page, showing filters and the weather widget.*
@@ -19,9 +23,6 @@
 *Showcasing project features, technologies, and architecture.*
 
 ---
-
-## 🚀 Overview
-TaskForge is a modern, intuitive, and feature-rich Todo List application designed to help users efficiently manage their daily tasks. With powerful features for task creation, tracking, and organization, along with real-time weather integration, TaskForge provides a seamless experience for staying productive.
 
 ## ✨ Key Features
 - **Persistent Task Storage:** Tasks are automatically saved locally in the browser's storage.
